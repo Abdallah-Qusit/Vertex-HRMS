@@ -1,114 +1,112 @@
 ﻿@using VertexHRMS.BLL.ModelVM.Department
 @model CreateDepartmentCardsVM
-
+ 
 @{
     ViewData["Title"] = "Create Department";
 }
-
+ 
 <style>
 
-
     .create-department-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
     }
 
     .department-form-card {
-        background: rgb(0, 0, 0);
-        color: white;
-        border: 4px solid #d8ece7;
-        min-height: 400px;
-        min-width: 600px;
-        border-radius: 15px;
-        padding: 20px;
-        position: relative;
-        z-index: 9999;
-        transition: border-color 0.3s ease;
+         background: rgb(0, 0, 0);
+         color: white;
+         border: 4px solid #d8ece7;
+         min-height: 400px;
+         min-width: 600px;
+         border-radius: 15px;
+         padding: 20px;
+         position: relative;
+         z-index: 9999;
+         transition: border-color 0.3s ease;
     }
 
   
     .department-form-card:hover {
-            border-color: #11c5c2;
-            
-            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+             border-color: #11c5c2;
+             box-shadow: 0 10px 24px rgba(0,0,0,0.18);
     }
 
     .form-title {
-        color: #11c5c2;
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin-bottom: 15px;
+         color: #11c5c2;
+         font-size: 1.4rem;
+         font-weight: bold;
+         margin-bottom: 15px;
     }
 
     .form-group {
-        margin-bottom: 12px;
-        display: flex;
-        flex-direction: column;
+         margin-bottom: 12px;
+         display: flex;
+         flex-direction: column;
     }
 
     .form-group label {
-        margin-bottom: 4px;
-        font-weight: bold;
+         margin-bottom: 4px;
+         font-weight: bold;
     }
 
         .form-group input,
         .form-group textarea {
-            padding: 8px;
-            border: 1px solid #aaa;
-            border-radius: 8px;
+             padding: 8px;
+             border: 1px solid #aaa;
+             border-radius: 8px;
         }
 
     
 
     .form-actions {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
+         margin-top: 20px;
+         display: flex;
+         justify-content: space-between;
     }
 
     .btn-submit {
-        display: inline-block;
-        padding: 11px 18px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #11c5c2;
-        border: 2px solid #11c5c2;
-        border-radius: 20px;
-        background: transparent;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
+         display: inline-block;
+         padding: 11px 18px;
+         font-size: 0.85rem;
+         font-weight: 600;
+         color: #11c5c2;
+         border: 2px solid #11c5c2;
+         border-radius: 20px;
+         background: transparent;
+         text-decoration: none;
+         transition: all 0.3s ease;
+         cursor: pointer;
     }
 
    
     .btn-submit:hover {
-            color: #fff;
-            background: #11c5c2;
-            transform: translateY(-2px);
+             color: #fff;
+             background: #11c5c2;
+             transform: translateY(-2px);
     }
 
     .btn-cancel {
-        background-color: #1e1e1e;
-        display: inline-block;
-        padding: 10px 16px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        background: transparent;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
+         background-color: #1e1e1e;
+         display: inline-block;
+         padding: 10px 16px;
+         font-size: 0.85rem;
+         font-weight: 600;
+         color: #ffffff;
+         border: 2px solid #ffffff;
+         border-radius: 20px;
+         background: transparent;
+         text-decoration: none;
+         transition: all 0.3s ease;
+         cursor: pointer;
     }
 
   
     .btn-cancel:hover {
-            color: #000000;
-            background: #ffffff;
-            transform: translateY(-2px);
+             color: #000000;
+             background: #ffffff;
+             transform: translateY(-2px);
     }
 </style>
 
@@ -118,20 +116,20 @@
 
         <form asp-action="Create" asp-controller="DepartmentCards" method="post">
             <div class="form-group">
-                <label asp-for="DepartmentName"></label>
-                <input asp-for="DepartmentName" placeholder="Enter department name" />
-                <span asp-validation-for="DepartmentName" class="error-message"></span>
+                 <label asp-for="DepartmentName"></label>
+                 <input asp-for="DepartmentName" placeholder="Enter department name" />
+                 <span asp-validation-for="DepartmentName" class="error-message"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="Description"></label>
-                <textarea asp-for="Description" rows="4" placeholder="Write a short description..."></textarea>
-                <span asp-validation-for="Description" class="error-message"></span>
+                 <label asp-for="Description"></label>
+                 <textarea asp-for="Description" rows="4" placeholder="Write a short description..."></textarea>
+                 <span asp-validation-for="Description" class="error-message"></span>
             </div>
 
             <div class="form-actions">
-                <button type="submit" class="btn-submit">@TS["Create"]</button>
-                <a asp-action="Getdepart" class="btn-cancel">@TS["Cancel"]</a>
+                 <button type="submit" class="btn-submit">@TS["Create"]</button>
+                 <a asp-action="Getdepart" class="btn-cancel">@TS["Cancel"]</a>
             </div>
         </form>
     </div>
